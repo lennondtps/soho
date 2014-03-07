@@ -1,0 +1,9 @@
+{% extends 'soho.layout.twig' %}
+
+{% block content %}
+    {% for post in posts %}
+    <div class="archive-post">
+        <a href="/{{ post.url }}">&raquo; {{ post.title }}</a>&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp;<span>{{ post.date|date('j M Y') }}</span>
+    </div>
+    {% endfor %}
+{% endblock %}

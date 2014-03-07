@@ -1,0 +1,18 @@
+{% extends 'soho.layout.twig' %}
+
+{% block content %}
+    <div class="navigation">
+        {% if prev %}
+        <div class="pull-left"><a href="/{{ prev.url }}">&laquo; previous</a></div>
+        {% endif %}
+        {% if next %}
+        <div class="pull-right"><a href="/{{ next.url }}">next &raquo;</a></div>
+        {% endif %}
+        <div class="clearfix"></div>
+    </div>
+    <hr>
+    <h3>{{ post.title }}</h3>
+    <div class="post-text">
+        {{ post.body }}
+    </div>
+{% endblock %}
