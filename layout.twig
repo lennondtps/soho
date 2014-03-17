@@ -38,11 +38,10 @@
             &nbsp;
             <hr>
             <ul class="menu">
-                <li><a class="active" href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/archive">Archive</a></li>
+                <li><a {{ isHome() ? 'class="active"' }} href="/">Home</a></li>
+                <li><a {{ isAbout() ? 'class="active"' }} href="/about">About</a></li>
+                <li><a {{ isArchive() ? 'class="active"' }}href="/archive">Archive</a></li>
             </ul>
-            
             <hr>
             
             <ul class="menu">
@@ -63,7 +62,7 @@
             <hr>
             <ul class="menu">
                 {% for category in categories %}
-                <li><a href="/{{ category.url }}">{{ category.name }}</a></li>
+                <li><a {{ isCat(category) ? 'class="active"' }} href="/{{ category.url }}">{{ category.name }}</a></li>
                 {% endfor %}
             </ul>
         </div>
