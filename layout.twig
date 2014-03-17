@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ blog.name }} - {{ blog.description }}</title>
-
+    
     <!-- Bootstrap -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     
     <link rel="stylesheet" href="{{ themepath }}assets/css/style.css">
     
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-
+    <link rel="alternate" type="application/rss+xml" title="{{ blog.name }} feed" href="/feed/">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,7 +24,12 @@
   
     <div class="header">
         <div class="logo">
+            {% if blog.ts.logo.url %}
+            <a href="/"><img src="{{  blog.ts.logo.url }}" alt="{{ blog.name }}"></a>
+            {% else%}
             <a href="/">{{ blog.name }}</a>
+            {% endif%}
+            
         </div>
     </div>
     
@@ -41,9 +46,9 @@
             <hr>
             
             <ul class="menu">
-                <li><a href="#">Behance</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Linkedin</a></li>
+                {% for link in blog.links %}
+                <li><a href="{{ link.link }}">{{ link.name }}</a></li>
+                {% endfor %}
             </ul>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-8 col">

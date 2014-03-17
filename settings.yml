@@ -1,0 +1,13 @@
+logo:
+    label: Logo image
+    type: file
+    name: logo
+    width: 400
+    height: 100
+    description: For better results use an image 400x100
+footer:
+    label: Footer text
+    type: textarea
+    name: footer
+    
+
