@@ -138,8 +138,9 @@ a:hover
 .post-text, .about-text
 {
     font-size:18px;
-    line-height:30px;
-    letter-spacing:1px;
+    line-height:28px;
+    letter-spacing:0.5px;
+    word-spacing:2px;
 }
 
 .archive-post
