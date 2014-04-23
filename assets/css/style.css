@@ -1,7 +1,7 @@
 body
 {
     background:#fff;
-    color:#848484;
+    color:#444444;
     font-family: 'Lato', sans-serif;
     padding-left:15px;
     padding-right:15px;
@@ -10,12 +10,12 @@ body
 
 a
 {
-    color:#848484;
+    color:#11A8A2;
 }
 
 a:hover
 {
-    color:#4e4e4e;
+    color:#235F64;
     text-decoration:none;
 }
 
@@ -138,8 +138,9 @@ a:hover
 .post-text, .about-text
 {
     font-size:18px;
-    line-height:30px;
-    letter-spacing:1px;
+    line-height:28px;
+    letter-spacing:0.5px;
+    word-spacing:2px;
 }
 
 .archive-post
